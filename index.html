@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Capture screen &amp; webcam into WebM</title>
+    <meta charset="utf8">
+  </head>
+  <body>
+    <h1>Capture screen &amp; webcam into WebM</h1>
+    <p>This experiment requires Chrome with the screen capture flag enabled.</p>
+    <p>Enable the screen capture flag by going to <a href="chrome://flags/#enable-usermedia-screen-capture">chrome://flags/#enable-usermedia-screen-capture</a> and active the feature.</p>
+    <p>
+      <button id="start">Start capturing</button>
+      <button id="encode" style="display: none">Stop &amp; encode</button>
+    </p>
+    
+    <video id="screen" width="500" height="500" autoplay style="display:none"></video>
+    <video id="camera" width="150" height="150" autoplay style="display:none"></video>
+    
+    <canvas id="output" width="500" height="500"></canvas>
+    
+    <script src="whammy.js"></script>
+    <script>
+          
+      var CANVAS_WIDTH  = window.screen.availWidth  / 2,
+          CANVAS_HEIGHT = window.screen.availHeight / 2,
+          canvas        = document.getElementById("output");
+          
+      canvas.width  = CANVAS_WIDTH;
+      canvas.height = CANVAS_HEIGHT;
+      
+      var ctx     = canvas.getContext("2d"),
+          cam     = document.querySelector('#camera'),
+          screen  = document.querySelector('#screen'),
+          encoder = new Whammy.Video(15),
+          record  = false;
+    </script>
+    <script src="recording.js"></script>
+    <script src="ui-events.js"></script>
+  </body>
+</html>
