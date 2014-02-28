@@ -4,6 +4,8 @@
 I am not entirely sure how I ended up writing this, but hey!  
 It's kinda cool, I think.
 
+[Try it here](http://avgp.github.io/webcaster)
+
 ## What it is
 This is a web application that uses [getUserMedia](http://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia) 
 and an [experimental screen capture feature for it](https://html5-demos.appspot.com/static/getusermedia/screenshare.html).
@@ -14,5 +16,7 @@ To get a video to use elsewhere, I use [Whammy.js]() to record the frames into W
 When you're done recording, you can encode and download that video file.
 
 ## So when is that experimental feature going to be widely available?
-Well, at least [Firefox seems to have landed it](https://bugzilla.mozilla.org/show_bug.cgi?id=742832) and Chrome hides it behind a feature flag yet.
+Well, at least [Firefox seems to work on it](https://bugzilla.mozilla.org/show_bug.cgi?id=742832) (see [this issue too](https://bugzilla.mozilla.org/show_bug.cgi?id=906956) and Chrome hides it behind a feature flag at the moment.
+
+I guess this will stay experimental for a while.  
 Let's see...
