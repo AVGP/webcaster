@@ -4,7 +4,10 @@
 I am not entirely sure how I ended up writing this, but hey!  
 It's kinda cool, I think.
 
-[Try it here](http://avgp.github.io/webcaster)
+[Try it here](https://googledrive.com/host/0B9MEoZDi5-peZVdwT3lDT09iaEE/index.html)
+
+## Remark
+Screen capture is currently only allowed on websites served via **HTTPS**, so if you want to try it out yourself, you need to host it with SSL (Google Drive is an option).
 
 ## What it is
 This is a web application that uses [getUserMedia](http://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia) 
