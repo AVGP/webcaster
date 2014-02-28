@@ -7,7 +7,7 @@ var startRecord = function() {
   record = true;
   
   navigator.getMedia({audio: true, video: true}, function(localMediaStream) {
-    cam.src = window.webkitURL.createObjectURL(localMediaStream);
+    cam.src = getObjectURL(localMediaStream);
   }, function() { alert("Boom"); });
 
   navigator.getMedia({
@@ -18,7 +18,7 @@ var startRecord = function() {
       }
     },
     function(localMediaStream) {
-      screen.src = window.webkitURL.createObjectURL(localMediaStream);
+      screen.src = getObjectURL(localMediaStream);
     },
     function() {
       alert("Boom");
@@ -33,3 +33,12 @@ var startRecord = function() {
     encoder.add(ctx);
   });
 };
+
+function getObjectURL(stream) {
+  if(window.webkitURL) {
+    return window.webkitURL.createObjectURL(stream);
+  }
+  else if(window.URL) {
+    return window.URL.createObjectURL(stream);
+  }
+}
